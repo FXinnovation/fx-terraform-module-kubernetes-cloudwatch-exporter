@@ -104,20 +104,6 @@ resource "kubernetes_deployment" "this" {
             }
           }
 
-          readiness_probe {
-            http_get {
-              path   = "/"
-              port   = local.port
-              scheme = "HTTP"
-            }
-
-            timeout_seconds     = 5
-            period_seconds      = 5
-            success_threshold   = 1
-            failure_threshold   = 35
-            initialDelaySeconds = 60
-          }
-
           liveness_probe {
             http_get {
               path   = "/"
