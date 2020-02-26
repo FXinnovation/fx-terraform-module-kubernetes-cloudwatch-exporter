@@ -1,4 +1,10 @@
 
+0.1.2 / 2020-02-26
+==================
+
+  * tech: Add versions.tf for providers and terraform
+  * fix: Set limits cpu to 50m
+
 0.1.1 / 2020-02-20
 ==================
 

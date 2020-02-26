@@ -7,8 +7,8 @@ Terraform module to deploy [cloudwatch_exporter](https://github.com/prometheus/c
 
 | Name | Version |
 |------|---------|
-| kubernetes | n/a |
-| random | n/a |
+| kubernetes | >= 1.10.0 |
+| random | >= 2.0.0 |
 
 ## Inputs
 
