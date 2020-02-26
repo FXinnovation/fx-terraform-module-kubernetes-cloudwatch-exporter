@@ -44,8 +44,11 @@ Terraform module to deploy [cloudwatch_exporter](https://github.com/prometheus/c
 |------|-------------|
 | config\_map\_name | Name of the config\_map created by the module. |
 | deployment\_name | Name of the deployment created by the module. |
+| label\_selectors | Map of the labels that are used as selectors. |
 | namespace | Name of the namespace in which the resources have been deployed. |
 | secret\_name | Name of the secret created by the module. |
 | service\_name | Name of the service created by the module. |
+| service\_port | Port number of the service port. |
+| service\_port\_name | Name of the service port. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

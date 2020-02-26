@@ -1,4 +1,13 @@
 #####
+# Global
+#####
+
+output "label_selectors" {
+  description = "Map of the labels that are used as selectors."
+  value       = element(concat(kubernetes_service.this.*.spec.0.selector, [{}]), 0)
+}
+
+#####
 # Deployment
 #####
 
@@ -23,6 +32,16 @@ output "secret_name" {
 output "service_name" {
   description = "Name of the service created by the module."
   value       = element(concat(kubernetes_service.this.*.metadata.0.name, [""]), 0)
+}
+
+output "service_port" {
+  description = "Port number of the service port."
+  value       = var.enabled ? local.service_port : ""
+}
+
+output "service_port_name" {
+  description = "Name of the service port."
+  value       = var.enabled ? "http" : ""
 }
 
 #####
