@@ -1,4 +1,13 @@
 
+0.2.0 / 2020-02-26
+==================
+
+  * fix: Typo in outputs
+  * tech: Add outputs on example
+  * feat: Add outputs and additionnal variables
+  * feat: Added selector, service port as output.
+  * feat: Add output for the namespace
+
 0.1.2 / 2020-02-26
 ==================
 
