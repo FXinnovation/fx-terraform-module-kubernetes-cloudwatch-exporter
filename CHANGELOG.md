@@ -2,6 +2,7 @@
 0.2.0 / 2020-02-26
 ==================
 
+  * fix: Add local labels to secret as well
   * fix: Typo in outputs
   * tech: Add outputs on example
   * feat: Add outputs and additionnal variables

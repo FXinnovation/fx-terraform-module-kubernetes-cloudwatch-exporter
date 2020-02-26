@@ -190,6 +190,7 @@ resource "kubernetes_secret" "this" {
       {
         "app.kubernetes.io/instance" = var.secret_name
       },
+      local.labels,
       var.labels,
       var.secret_labels
     )
