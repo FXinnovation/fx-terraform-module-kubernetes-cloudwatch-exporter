@@ -12,6 +12,7 @@ locals {
   }
   configuration = yamlencode(var.configuration)
   port          = 9106
+  service_port  = 80
 }
 
 #####
@@ -65,7 +66,7 @@ resource "kubernetes_deployment" "this" {
             "configuration/hash" = sha256(local.configuration)
           },
           var.annotations,
-          var.deployment_annotations
+          var.deployment_template_annotations
         )
         labels = merge(
           {
@@ -75,7 +76,7 @@ resource "kubernetes_deployment" "this" {
           },
           local.labels,
           var.labels,
-          var.deployment_labels
+          var.deployment_template_labels
         )
       }
       spec {
@@ -236,7 +237,7 @@ resource "kubernetes_service" "this" {
     }
     type = "ClusterIP"
     port {
-      port        = 80
+      port        = local.service_port
       target_port = "http"
       protocol    = "TCP"
       name        = "http"
