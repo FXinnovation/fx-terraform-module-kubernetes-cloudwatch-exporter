@@ -22,6 +22,11 @@ output "image_pull_policy" {
   value       = module.default.image_pull_policy
 }
 
+output "prometheus_alert_groups" {
+  description = "List of maps representing prometheus alert groups."
+  value       = module.default.prometheus_alert_groups
+}
+
 #####
 # Deployment
 #####

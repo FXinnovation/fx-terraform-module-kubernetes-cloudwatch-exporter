@@ -22,6 +22,11 @@ output "image_pull_policy" {
   value       = var.enabled ? var.image_pull_policy : ""
 }
 
+output "prometheus_alert_groups" {
+  description = "List of object representing prometheus alert groups you can import in prometheus to alert you in case of problems."
+  value       = var.enabled ? local.prometheus_alert_groups : []
+}
+
 #####
 # Deployment
 #####

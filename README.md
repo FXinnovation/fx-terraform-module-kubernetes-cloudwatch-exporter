@@ -31,6 +31,8 @@ Terraform module to deploy [cloudwatch_exporter](https://github.com/prometheus/c
 | image\_version | Tag of the docker image to use. | `string` | `"latest"` | no |
 | labels | Additionnal labels that will be merged on all resources. | `map` | `{}` | no |
 | namespace | Namespace in which the module will be deployed. | `string` | `"default"` | no |
+| prometheus\_alert\_groups\_rules\_annotations | Map of strings that will be merge on all prometheus alert groups rules annotations. | `map` | `{}` | no |
+| prometheus\_alert\_groups\_rules\_labels | Map of strings that will be merge on all prometheus alert groups rules labels. | `map` | `{}` | no |
 | replicas | Number of replicas to deploy. | `number` | `1` | no |
 | secret\_annotations | Additionnal annotations that will be merged for the secret. | `map` | `{}` | no |
 | secret\_key | Client secret that will be used by the cloudwatch-exporter. | `string` | n/a | yes |
@@ -56,6 +58,7 @@ Terraform module to deploy [cloudwatch_exporter](https://github.com/prometheus/c
 | image\_pull\_policy | Image pull policy defined on the cloudwatch-exporter container. |
 | image\_version | Tag of the docker image used for the cloudwatch-exporter container. |
 | namespace | Name of the namespace in which the resources have been deployed. |
+| prometheus\_alert\_groups | List of object representing prometheus alert groups you can import in prometheus to alert you in case of problems. |
 | secret\_annotations | Map of annotations that are configured on the secret. |
 | secret\_labels | Map of labels that are configured on the secret. |
 | secret\_name | Name of the secret created by the module. |

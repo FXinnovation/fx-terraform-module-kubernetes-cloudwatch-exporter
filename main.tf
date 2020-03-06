@@ -13,6 +13,51 @@ locals {
   configuration = yamlencode(var.configuration)
   port          = 9106
   service_port  = 80
+  prometheus_alert_groups = [
+    {
+      "name" = "cloudwatch-exporter"
+      "rules" = [
+        {
+          "alert" = "CloudwatchExporterScrapeErrors"
+          "expr"  = "cloudwatch_exporter_scrape_error > 0"
+          "for"   = "1m"
+          "labels" = merge(
+            {
+              "severity" = "critical"
+              "urgency"  = "2"
+            },
+            var.prometheus_alert_groups_rules_labels
+          )
+          "annotations" = merge(
+            {
+              "summary"     = "Cloudwatch Exporter - Scrape Error on {{ $labels.instance }}",
+              "description" = "Cloudwatch Exporter: \n {{ $labels.instance }} scrape error.\nLabels:\n{{ $labels }}"
+            },
+            var.prometheus_alert_groups_rules_annotations
+          )
+        },
+        {
+          "alert" = "CloudwatchExporterScrapeDurationError"
+          "expr"  = "deriv(oracledb_exporter_last_scrape_duration_seconds[2m]) > 0.2 and oracledb_exporter_last_scrape_duration_seconds > 10"
+          "for"   = "5m"
+          "labels" = merge(
+            {
+              "severity" = "warning"
+              "urgency"  = "3"
+            },
+            var.prometheus_alert_groups_rules_labels
+          )
+          "annotations" = merge(
+            {
+              "summary"     = "Cloudwatch Exporter - Scrape Duration Error on {{ $labels.instance }}",
+              "description" = "Cloudwatch Exporter:\n {{ $labels.instance }} scrape duration is too high.\nLabels:\n{{ $labels }}"
+            },
+            var.prometheus_alert_groups_rules_annotations
+          )
+        }
+      ]
+    }
+  ]
 }
 
 #####
