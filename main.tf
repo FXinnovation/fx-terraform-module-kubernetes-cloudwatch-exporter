@@ -158,10 +158,10 @@ resource "kubernetes_deployment" "this" {
             }
 
             timeout_seconds       = 5
-            period_seconds        = 5
+            period_seconds        = 10
             success_threshold     = 1
-            failure_threshold     = 35
-            initial_delay_seconds = 60
+            failure_threshold     = 20
+            initial_delay_seconds = 90
           }
 
           liveness_probe {
@@ -175,7 +175,7 @@ resource "kubernetes_deployment" "this" {
             period_seconds        = 10
             success_threshold     = 1
             failure_threshold     = 3
-            initial_delay_seconds = 90
+            initial_delay_seconds = 300
           }
 
           port {

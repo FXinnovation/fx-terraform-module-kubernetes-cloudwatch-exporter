@@ -1,7 +1,13 @@
 
-0.3.0 / 2020-03-06
+0.3.1 / 2020-03-09
 ==================
 
+  * fix: Change readiness and liveness probes
+
+0.3.0 / 2020-03-09
+==================
+
+  * fix: expr for alerts referenced wrong metric
   * feat: All prometheus_alert_group output and vars
 
 0.2.0 / 2020-02-26
