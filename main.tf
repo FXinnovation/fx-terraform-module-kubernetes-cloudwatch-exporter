@@ -38,7 +38,7 @@ locals {
         },
         {
           "alert" = "CloudwatchExporterScrapeDurationError"
-          "expr"  = "deriv(oracledb_exporter_last_scrape_duration_seconds[2m]) > 0.2 and oracledb_exporter_last_scrape_duration_seconds > 10"
+          "expr"  = "deriv(cloudwatch_exporter_last_scrape_duration_seconds[2m]) > 0.2 and cloudwatch_exporter_last_scrape_duration_seconds > 10"
           "for"   = "5m"
           "labels" = merge(
             {
