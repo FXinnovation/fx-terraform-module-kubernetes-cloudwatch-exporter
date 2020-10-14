@@ -3,6 +3,14 @@
 Terraform module to deploy [cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter) on kubernetes.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+| kubernetes | >= 1.10.0 |
+| random | >= 2.0.0 |
+
 ## Providers
 
 | Name | Version |
@@ -13,7 +21,7 @@ Terraform module to deploy [cloudwatch_exporter](https://github.com/prometheus/c
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | access\_key | Client ID that will be used by the cloudwatch-exporter. | `string` | n/a | yes |
 | annotations | Additionnal annotations that will be merged on all resources. | `map` | `{}` | no |
 | config\_map\_annotations | Additionnal annotations that will be merged for the config map. | `map` | `{}` | no |

@@ -1,4 +1,10 @@
 
+0.3.2 / 2020-10-14
+==================
+
+  * chore: Update pre-commit configuration
+  * fix: Change resources of cloudwatch exporter
+
 0.3.1 / 2020-03-09
 ==================
 
