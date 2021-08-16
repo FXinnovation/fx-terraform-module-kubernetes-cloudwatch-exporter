@@ -2,7 +2,8 @@
 0.4.0 / 2021-08-16
 ==================
 
-* feat: (BREAKING CHANGE) Update kubernetes terraform provider to version 2.x
+  * feat: (BREAKING CHANGE) Update kubernetes terraform provider to version 2.x
+  * chore: bump pre-commit hooks
 
 0.3.2 / 2020-10-14
 ==================
