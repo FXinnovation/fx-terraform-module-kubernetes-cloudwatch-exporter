@@ -104,6 +104,26 @@ variable "replicas" {
   default     = 1
 }
 
+variable "cpu_request" {
+  description = "Amount of cpu to request at pod startup."
+  default     = "300m"
+}
+
+variable "cpu_limit" {
+  description = "Maximum amount of cpu that can be used by the pod."
+  default     = "500m"
+}
+
+variable "memory_request" {
+  description = "Amount of memory to request at pod startup."
+  default     = "256Mi"
+}
+
+variable "memory_limit" {
+  description = "Maximum amount of memory that can be used by the pod."
+  default     = "512Mi"
+}
+
 #####
 # Service
 #####

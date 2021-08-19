@@ -1,4 +1,9 @@
 
+0.4.1 / 2021-08-19
+==================
+
+* feat: Allow to customize the cpu and memory request/limit in the deployment
+
 0.4.0 / 2021-08-16
 ==================
 

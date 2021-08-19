@@ -42,6 +42,8 @@ No modules.
 | <a name="input_config_map_labels"></a> [config\_map\_labels](#input\_config\_map\_labels) | Additionnal labels that will be merged for the config map. | `map` | `{}` | no |
 | <a name="input_config_map_name"></a> [config\_map\_name](#input\_config\_map\_name) | Name of the config map that will be created. | `string` | `"cloudwatch-exporter"` | no |
 | <a name="input_configuration"></a> [configuration](#input\_configuration) | Object representating the yaml configuration for cloudwatch-exporter. | `any` | n/a | yes |
+| <a name="input_cpu_limit"></a> [cpu\_limit](#input\_cpu\_limit) | Maximum amount of cpu that can be used by the pod. | `string` | `"500m"` | no |
+| <a name="input_cpu_request"></a> [cpu\_request](#input\_cpu\_request) | Amount of cpu to request at pod startup. | `string` | `"300m"` | no |
 | <a name="input_deployment_annotations"></a> [deployment\_annotations](#input\_deployment\_annotations) | Additionnal annotations that will be merged on the deployment. | `map` | `{}` | no |
 | <a name="input_deployment_labels"></a> [deployment\_labels](#input\_deployment\_labels) | Additionnal labels that will be merged on the deployment. | `map` | `{}` | no |
 | <a name="input_deployment_name"></a> [deployment\_name](#input\_deployment\_name) | Name of the deployment that will be create. | `string` | `"cloudwatch-exporter"` | no |
@@ -52,6 +54,8 @@ No modules.
 | <a name="input_image_pull_policy"></a> [image\_pull\_policy](#input\_image\_pull\_policy) | Image pull policy on the main container. | `string` | `"IfNotPresent"` | no |
 | <a name="input_image_version"></a> [image\_version](#input\_image\_version) | Tag of the docker image to use. | `string` | `"latest"` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | Additionnal labels that will be merged on all resources. | `map` | `{}` | no |
+| <a name="input_memory_limit"></a> [memory\_limit](#input\_memory\_limit) | Maximum amount of memory that can be used by the pod. | `string` | `"512Mi"` | no |
+| <a name="input_memory_request"></a> [memory\_request](#input\_memory\_request) | Amount of memory to request at pod startup. | `string` | `"256Mi"` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace in which the module will be deployed. | `string` | `"default"` | no |
 | <a name="input_prometheus_alert_groups_rules_annotations"></a> [prometheus\_alert\_groups\_rules\_annotations](#input\_prometheus\_alert\_groups\_rules\_annotations) | Map of strings that will be merge on all prometheus alert groups rules annotations. | `map` | `{}` | no |
 | <a name="input_prometheus_alert_groups_rules_labels"></a> [prometheus\_alert\_groups\_rules\_labels](#input\_prometheus\_alert\_groups\_rules\_labels) | Map of strings that will be merge on all prometheus alert groups rules labels. | `map` | `{}` | no |
