@@ -3,6 +3,7 @@
 ==================
 
 * feat: Allow to customize the cpu and memory request/limit in the deployment
+* feat: Disable the automount of service account token
 
 0.4.0 / 2021-08-16
 ==================

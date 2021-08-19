@@ -125,6 +125,7 @@ resource "kubernetes_deployment" "this" {
         )
       }
       spec {
+        automount_service_account_token = false
         container {
           name              = "cloudwatch-exporter"
           image             = "${var.image_name}:${var.image_version}"
