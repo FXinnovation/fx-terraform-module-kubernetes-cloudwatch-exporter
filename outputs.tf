@@ -27,6 +27,7 @@ output "prometheus_alert_groups" {
   value       = var.enabled ? local.prometheus_alert_groups : []
 }
 
+
 #####
 # Deployment
 #####
@@ -56,6 +57,7 @@ output "deployment_template_labels" {
   value       = element(concat(kubernetes_deployment.this.*.spec.0.template.0.metadata.0.labels, [{}]), 0)
 }
 
+
 #####
 # Sercret
 #####
@@ -74,6 +76,7 @@ output "secret_labels" {
   description = "Map of labels that are configured on the secret."
   value       = element(concat(kubernetes_secret.this.*.metadata.0.labels, [{}]), 0)
 }
+
 
 #####
 # Service
@@ -104,6 +107,7 @@ output "service_labels" {
   value       = element(concat(kubernetes_service.this.*.metadata.0.labels, [{}]), 0)
 }
 
+
 #####
 # Configmap
 #####
@@ -122,6 +126,7 @@ output "config_map_labels" {
   description = "Map of labels that are configured on the config_map."
   value       = element(concat(kubernetes_config_map.this.*.metadata.0.labels, [{}]), 0)
 }
+
 
 #####
 # Namespace

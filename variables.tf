@@ -22,6 +22,7 @@ variable "namespace" {
   default     = "default"
 }
 
+
 #####
 # Prometheus
 #####
@@ -35,6 +36,7 @@ variable "prometheus_alert_groups_rules_annotations" {
   description = "Map of strings that will be merge on all prometheus alert groups rules annotations."
   default     = {}
 }
+
 
 #####
 # Application
@@ -54,6 +56,7 @@ variable "configuration" {
   description = "Object representating the yaml configuration for cloudwatch-exporter."
   type        = any
 }
+
 
 #####
 # Deployment
@@ -124,6 +127,7 @@ variable "memory_limit" {
   default     = "512Mi"
 }
 
+
 #####
 # Service
 #####
@@ -143,6 +147,7 @@ variable "service_name" {
   default     = "cloudwatch-exporter"
 }
 
+
 #####
 # Secret
 #####
@@ -161,6 +166,7 @@ variable "secret_name" {
   description = "Name of the secret that will be created."
   default     = "cloudwatch-exporter"
 }
+
 
 #####
 # Config Map

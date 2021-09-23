@@ -60,6 +60,7 @@ locals {
   ]
 }
 
+
 #####
 # Randoms
 #####
@@ -70,6 +71,7 @@ resource "random_string" "selector" {
   number  = false
   length  = 8
 }
+
 
 #####
 # Deployment
@@ -218,6 +220,7 @@ resource "kubernetes_deployment" "this" {
   }
 }
 
+
 #####
 # Secret
 #####
@@ -249,6 +252,7 @@ resource "kubernetes_secret" "this" {
 
   type = "Opaque"
 }
+
 
 #####
 # Service
@@ -291,6 +295,7 @@ resource "kubernetes_service" "this" {
     }
   }
 }
+
 
 #####
 # ConfigMap
