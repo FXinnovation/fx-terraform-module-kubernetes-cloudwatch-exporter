@@ -1,3 +1,16 @@
+1.0.0 / 2021-09-23
+==================
+
+* (BREAKING) chore: pins `random` provider to `3.x+`.
+* (BREAKING) chore: pins `azurerm` provider to `2.x+`.
+* feat: add `pre-commit-afcmf` (`v0.1.2`).
+* refactor: default example:
+  * add `versions.tf` file.
+  * add `README.md` file.
+  * lint code.
+* refactor: use kind for Jenkins deployment.
+* fix: build failure, add timeout on namespace resource in default example.
+* fix: `LICENSE` file.
 
 0.4.1 / 2021-08-19
 ==================
